@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'channels',
     'authtest',
     'accounts',
+    'shift_maker',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
