@@ -2,8 +2,6 @@ from django.shortcuts import render
 
 # Create your views here.
 # Create your views here.
-def index(request):
-    return render(request, "shift_maker/start.html")
 
 def choice_page(request):
     return render(request, "shift_maker/choice_page.html")
