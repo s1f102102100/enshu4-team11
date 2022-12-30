@@ -44,12 +44,16 @@ for d in Day:
   prob += pulp.lpSum([x[e,d] for e in Emp]) >= S_req[d]-1
 
 #3連休以上を作らない
-n1=input('n連休以上を作らない')
+n1=int(input('n連休以上を作らない'))
+q=0
 for e in Emp:
-  for d in Day[:-int(n1)]:
-    prob += x[e,d] + x[e,d+1] + x[e,d+2] <=int(n1) 
+  for d in Day[:-n1]:
+    for f in range(n1):
+        n = x[e,d+f]
+    prob += n<=n1 
 
 #5連勤以上を作らない
+n2=input('n連勤以上を作らない')
 for e in Emp:
   for d in Day[:-4]:
     prob += x[e,d] + x[e,d+1] + x[e,d+2] + x[e,d+3] + x[e,d+4] >= 1
