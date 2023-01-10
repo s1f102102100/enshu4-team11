@@ -12,7 +12,10 @@ body {
     text-decoration: none;
   }
 
-.select {
+.selection {
+    margin: auto;
+    width: 45%;
+    height: 45%;
     display: inline-block;
     border-style: solid;
     background-color: lightgray;
@@ -37,14 +40,19 @@ body {
 
 .title {
     position: fixed;
+    left: 10px;
+    top: 1px;
     background-color: #ffff9e;
 }
 
 .table {
-    position: absolute;
+    border-color: #000;
+    background-color: lightgrey;
     margin-top: 50px;
-    padding-bottom: 50px;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    align-self: center;
 }
 
 .close {
