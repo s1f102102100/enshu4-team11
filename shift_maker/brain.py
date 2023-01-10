@@ -15,7 +15,7 @@ H_hope=list(zip( Emp,H_hope_before ))
 #定数の定義
 #最適出勤人数リスト
 
-S_req = {d:(int(input('問題が出てるところ'))) for d in Day}
+S_req = {d:3 for d in Day}
 
 #必要出勤日数
 H_req = {e:hr for e,hr in zip(Emp,list(map(int, input('必要出勤日数(半角空白区切り)').split())))}
@@ -66,4 +66,11 @@ print('Status:', pulp.LpStatus[status])
 
 #計算結果の表示
 import pandas as pd
-print(pd.DataFrame([[x[e,d].value() for d in Day] for e in Emp]))
+import webbrowser
+df=pd.DataFrame([[x[e,d].value() for d in Day] for e in Emp])
+
+html = df.to_html('default.html')
+
+text_file = open("./start.html","w")
+text_file.write(html)
+text_file.close()
