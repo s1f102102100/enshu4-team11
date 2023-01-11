@@ -77,3 +77,14 @@ body {
     color: black;
     text-decoration: none;
 }
+
+.table1{
+    border-color: #000;
+    background-color: lightgrey;
+    margin-top: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    align-self: center; 
+
+}

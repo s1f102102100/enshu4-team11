@@ -1,6 +1,8 @@
 from django.shortcuts import render
 import pandas as pd
 
+
+
 # Create your views here.
 # Create your views here.
 
@@ -16,5 +18,11 @@ def irregular(request):
 def start(request):
     return render(request, "shift_maker/start.html")
 
+def making(request):
+    return render(request, "shift_maker/making.html")
+
 def brain(request):
     return render(request, "brain.py")
+
+
+
