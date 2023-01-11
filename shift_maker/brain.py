@@ -69,8 +69,9 @@ import pandas as pd
 import webbrowser
 df=pd.DataFrame([[x[e,d].value() for d in Day] for e in Emp])
 
-html = df.to_html('default.html')
+html = df.to_html()
+print(html)
 
-text_file = open("./start.html","w")
+text_file = open("templates/shift_maker/irregular.html","w")
 text_file.write(html)
 text_file.close()

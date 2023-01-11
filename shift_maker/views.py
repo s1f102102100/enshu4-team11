@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import pandas as pd
 
 # Create your views here.
 # Create your views here.
@@ -17,4 +17,4 @@ def start(request):
     return render(request, "shift_maker/start.html")
 
 def brain(request):
-    return render(request, "brain.html")
+    return render(request, "brain.py")

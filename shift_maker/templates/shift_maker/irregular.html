@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -8,7 +9,7 @@
   <body>
     <p>
         <h5>特定出勤入力</h5>
-        <a href="./login.html">ログアウト</a>
+        <a href="{% url 'start' %}">ログアウト</a>
     </p>
     <table>
         <tr>
@@ -312,7 +313,11 @@
             <td></td>
         </tr>
     </table>
+    <body>
+      {% load static %}
+      
+    </body>
     <button>保存</button>
-    <a href="./selection.html">閉じる</a>
+    <a href="{% url 'start' %}">閉じる</a>
   </body>
 </html>

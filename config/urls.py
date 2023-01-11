@@ -20,11 +20,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('',include('shift_maker.urls')),
-    path('app01/', include('authtest.urls')),
-
-    path('admin/', admin.site.urls),
-    path('selection/',include('shift_maker.urls')),
+    path('default/',include('shift_maker.urls')),
     path('irregular/',include('shift_maker.urls')),
-    path('login/', include('shift_maker.urls')),
-    path('regular/', include('shift_maker.urls')),
+    path('choice_page/', include('shift_maker.urls')),
+    path('start/', include('shift_maker.urls')),
 ]
